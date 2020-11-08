@@ -20,9 +20,9 @@ server.use(express.urlencoded({
  extended: true
 }))
 function template(html, result, val1, val2) {
- return html.replace('RESULT', result)
- .replace('Value 1', val1)
- .replace('Value 2', val2)
+ return html.replace('{{RESULT}}', result)
+ .replace('{{VALUE1}}', val1)
+ .replace('{{VALUE2}}', val2)
 }
 function operate(oper, val1, val2) {
  switch (oper) {
